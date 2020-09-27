@@ -57,12 +57,13 @@ body {
 .logo-text{
   margin-top: 0;
   margin-bottom: 0;
+  padding-bottom: 0;
   text-decoration: none;
   background: none;
   text-align: center;
   text-transform: capitalize;
   font-family: GoT;
-  font-size: 81px;
+  font-size: 92px;
 }
 
 .main-content {
@@ -115,10 +116,12 @@ a {
   background: #d4a05c;
   color: rgb(89, 6, 6);
   font-family: Ancient;
-  font-size: 30px;
+  font-size: 31px;
 }
 
 .detail-image-container {
+  margin-top: 0;
+  padding-top: 0;
   text-align: left;
   flex: 1 1 auto;
   display: flex;
@@ -134,7 +137,7 @@ a {
   position: relative;
   text-align: left;
 
-  transition: transform 0.75s;
+  transition: transform 0.48s cubic-bezier(.04,.49,1,.51);
 
 }
 
@@ -155,8 +158,8 @@ a {
   font-family: Throne;
   font-weight: normal;
   color: rgb(0, 0, 0);
-  text-shadow: #4d2508 20px 12px 4px;;
-  font-size: 62px;
+  text-shadow: #4d2508 19px 20px 4px;;
+  font-size: 70px;
 }
 
 .hidden-detail .detail-image-container {
