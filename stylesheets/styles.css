@@ -9,7 +9,6 @@ font-style: normal;
   font-family: 'Ancient';
   src: url('./fonts/A2.ttf');
   font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
@@ -23,6 +22,7 @@ font-style: normal;
   font-family: 'Throne';
   src: url('./fonts/AT.ttf');
 }
+
 @font-face {
   font-family: 'Seat';
   src: url('./fonts/Seat.ttf');
@@ -31,13 +31,7 @@ font-style: normal;
 html, body {
   height: 100%;
 }
-.bg {
-  background-image: url('../img/KL2.jpg');
-  width: 100%;
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
 
 body {
   display: flex;
@@ -58,12 +52,13 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 0;
+  padding-top: 0;
   text-decoration: none;
   background: none;
   text-align: center;
   text-transform: capitalize;
   font-family: GoT;
-  font-size: 92px;
+  font-size: 84px;
 }
 
 .main-content {
@@ -78,7 +73,7 @@ body {
   order: 2;
   justify-content: space-between;
   list-style: none;
-  padding: 20px 0;
+  padding: 21px 0;
   white-space:nowrap;
   overflow-x: auto;
 }
@@ -114,15 +109,15 @@ a {
   margin: 0;
   padding: 7px 13px; /* 1st: up, down  2nd: right,left*/
   background: #d4a05c;
-  color: rgb(89, 6, 6);
+  color: rgb(77, 11, 11);
   font-family: Ancient;
   font-size: 31px;
 }
 
 .detail-image-container {
+
   margin-top: 0;
   padding-top: 0;
-  text-align: left;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
@@ -137,7 +132,7 @@ a {
   position: relative;
   text-align: left;
 
-  transition: transform 0.48s cubic-bezier(.04,.49,1,.51);
+  transition: transform 0.48s cubic-bezier(0.2,.49,1,.51)/* how should it come out*/;
 
 }
 
@@ -146,20 +141,21 @@ a {
   transition: transform 0ms;
 }
 
-.detail-image{
-  width: 90%;
+.detail-image {
+  width: 95%;
+
 }
 
 .detail-image-title{
   position: absolute;
-  bottom: -53px;
+  bottom: -58px; /* you can use Developer tools to tweek */
   left: 4px;
 
   font-family: Throne;
   font-weight: normal;
   color: rgb(0, 0, 0);
-  text-shadow: #4d2508 19px 20px 4px;;
-  font-size: 70px;
+  text-shadow: #4d2508 19px 20px 4px;
+  font-size: 69px;
 }
 
 .hidden-detail .detail-image-container {
@@ -180,15 +176,18 @@ a {
     flex-direction: row-reverse;
     overflow: hidden;
   }
+
   .house-list {
     flex-direction: column;
     order: 0;
     margin-right: 20px;
     padding: 0 35px;
   }
+
   .house-item{
     max-width: 300px;
   }
+
   .house-item + .house-item{
     margin-top: 20px;
   }
@@ -203,6 +202,7 @@ a {
     font-family: Medival;
     font-size: 23px;
   }
+
   .throne {
     text-align: right;
     font-size: 85px;
