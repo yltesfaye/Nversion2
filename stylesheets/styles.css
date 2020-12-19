@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 13px;
-  background-image: url('./img/KL2.jpg'), url('./img/KL2.jpg'), url('./img/KL-I.jpg');;/* we used double dot(..) because the folder is not in the same directory of styles.css*/
+  background-image: url('./img/KL2.jpg'), url('./img/KL2.jpg'), url('./img/KL-I.jpg');/* we used double dot(..) because the folder is not in the same directory of styles.css*/
   background-position: left -7.5px  bottom -110px, left  bottom 585px, left bottom -589px;
   background-size: 1380px 759.38px; /*try to keep aspect ratio 16:9 */
   background-repeat: no-repeat;
