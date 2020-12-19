@@ -6,6 +6,11 @@ font-style: normal;
 }
 
 @font-face {
+  font-family: 'kkl';
+  src: url('./fonts/W.ttf');
+}
+
+@font-face {
   font-family: 'Ancient';
   src: url('./fonts/A2.ttf');
   font-weight: normal;
@@ -29,7 +34,8 @@ font-style: normal;
 }
 
 html, body {
-  height: 100%;
+ height: 100%; /* make the height equal to the height of the display*/
+ width: 100%;
 }
 
 
@@ -37,10 +43,9 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 13px;
-  background-image: url('../img/KL2.jpg');
-  width: 100%;
-  background-position: top;
-  background-size: cover;
+  background-image: url('./img/Kl2.jpg'), url('./img/KL2.jpg'), url('./img/KL-I.jpg');;/* we used double dot(..) because the folder is not in the same directory of styles.css*/
+  background-position: left -7.5px  bottom -110px, left  bottom 585px, left bottom -589px;
+  background-size: 1380px 759.38px; /*try to keep aspect ratio 16:9 */
   background-repeat: no-repeat;
 }
 
@@ -48,7 +53,7 @@ body {
   flex: 0 1 auto;
 }
 
-.logo-text{
+.land-text{
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -56,9 +61,13 @@ body {
   text-decoration: none;
   background: none;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: lowercase;
   font-family: GoT;
-  font-size: 84px;
+  font-size: 102px;
+}
+
+.land-text::first-letter {
+  text-transform: uppercase;; /* Remeber you can use capitalize for only 1st letter */
 }
 
 .main-content {
@@ -73,8 +82,8 @@ body {
   order: 2;
   justify-content: space-between;
   list-style: none;
-  padding: 21px 0;
-  white-space:nowrap;
+  padding: 21px 0; /*Top Right Bottom Left*/
+  white-space: nowrap;
   overflow-x: auto;
 }
 
@@ -83,16 +92,16 @@ a {
 }
 
 .house-item {
-  display: inline-block;
-  min-width: 240px;
-  max-width: 240px;
-  border: 1px solid rgb(115, 98, 54);
-  border: 1px solid rgba(102, 101, 19, 0.49);
+  display: inline-block; /* Block- full width, ALWAYS start on a new line; inline- only required width, don't start new line as the name suggestd IN Line....I-B allow H and W for elts/respect top and Bottom Mar|Pad/ dont start new line.*/
+  margin: 1px;
+  min-width: 252px;
+  max-width: 250px;
+  border: 8px outset #8e2b2b;
   transition: transform 133ms ease-in-out;
 }
 
 .house-item:hover {
-  transform: scale(1.2);
+  transform: scale(1.18882);
 /*  transition: transform 460ms ease-in-out; */
 
 }
@@ -107,17 +116,26 @@ a {
   text-align: center;
   display: block;
   margin: 0;
-  padding: 7px 13px; /* 1st: up, down  2nd: right,left*/
-  background: #d4a05c;
+  padding: 4px 13px; /* 1st: Top, Botton 2nd: right,left*/
+  background: #c38a40;
   color: rgb(77, 11, 11);
   font-family: Ancient;
-  font-size: 31px;
+  font-size: 30.2px;
+
+}
+
+.house-name::first-letter {
+  font-size: 140%;
+}
+
+.second-letter {
+  font-size: 140%;
 }
 
 .detail-image-container {
-
   margin-top: 0;
   padding-top: 0;
+  padding-bottom: 22px;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
@@ -126,37 +144,45 @@ a {
 }
 
 .detail-image-frame{
-
-  margin-left: 0;
+  display: inline;
+  margin-left: -30px;
   padding-left: 0;
+  padding-bottom: 42px;
+  margin-bottom: -31px;
   position: relative;
   text-align: left;
+  max-height: 450px;
 
   transition: transform 0.48s cubic-bezier(0.2,.49,1,.51)/* how should it come out*/;
 
 }
 
 .is-tiny {
-  transform: scale(0.001);
+  transform: scale(8.7);
   transition: transform 0ms;
 }
 
 .detail-image {
-  width: 95%;
+  width: 96%;
 
 }
 
-.detail-image-title{
+.detail-image-title {
   position: absolute;
-  bottom: -58px; /* you can use Developer tools to tweek */
+  bottom: -40px; /* you can use Developer tools to tweek */
   left: 4px;
 
   font-family: Throne;
   font-weight: normal;
   color: rgb(0, 0, 0);
   text-shadow: #4d2508 19px 20px 4px;
-  font-size: 69px;
+  font-size: 78px;
 }
+
+.detail-image-title::first-letter{
+  font-size: 104%;
+}
+
 
 .hidden-detail .detail-image-container {
   display: none;
@@ -193,19 +219,22 @@ a {
   }
 
   }
+
   .footer {
     display: flex;
     flex: 0 1 auto;
     margin-right: 0;
-    padding-right: 0;
-    text-align: Center;
+    margin-bottom: 35px;
+    padding-right: 0px;
+    padding-left: 45px;
+    text-align: left;
     font-family: Medival;
-    font-size: 23px;
+    font-size: 29px;
   }
 
   .throne {
     text-align: right;
-    font-size: 95px;
+    font-size: 100px;
     font-weight: lighter;
     font-family: Seat;
   }
