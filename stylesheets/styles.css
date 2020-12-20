@@ -152,13 +152,12 @@ a {
   position: relative;
   text-align: left;
   max-height: 450px;
-
-  transition: transform 0.48s cubic-bezier(0.2,.49,1,.51)/* how should it come out*/;
+  transition: transform 0.45s cubic-bezier(0.62, -0.17, 1, 0.51)
 
 }
 
 .is-tiny {
-  transform: scale(8.7);
+  transform: scale(12);
   transition: transform 0ms;
 }
 
